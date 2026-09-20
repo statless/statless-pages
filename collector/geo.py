@@ -57,7 +57,7 @@ class GeoLookup:
             resp = self._reader.country(ip.strip())
             code = (resp.country.iso_code or "").upper()
             return code if len(code) == 2 else UNKNOWN
-        except (AddressNotFoundError, InvalidDatabaseError, TypeError, ValueError):
+        except AddressNotFoundError, InvalidDatabaseError, TypeError, ValueError:
             # Unknown IP (not in DB) or corrupt record maps to "XX", never raises.
             return UNKNOWN
         except OSError:

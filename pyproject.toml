@@ -3,14 +3,14 @@ name = "statless-pages"
 version = "0.1.0"
 description = "Self-hostable, cookie-free view, referrer, and dwell-time tracker for Notion, Substack, and GitHub README files."
 readme = "README.md"
-requires-python = ">=3.13"
-license = { text = "AGPL-3.0-or-later" }
-authors = [{ name = "statless-pages contributors" }]
+requires-python = ">=3.14"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Dimitrios Xynos" }]
 keywords = ["analytics", "privacy", "notion", "selfhosted", "fastapi"]
 classifiers = [
-  "License :: OSI Approved :: GNU Affero General Public License v3",
   "Framework :: FastAPI",
-  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
 ]
 
 dependencies = [
@@ -44,7 +44,7 @@ build-backend = "hatchling.build"
 packages = ["collector"]
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py314"
 line-length = 100
 
 [tool.ruff.lint]
@@ -52,7 +52,7 @@ select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "C4", "PT", "RET", "ASYNC"]
 
 [tool.pyright]
 include = ["collector", "tests"]
-pythonVersion = "3.13"
+pythonVersion = "3.14"
 typeCheckingMode = "strict"
 reportMissingTypeStubs = false
 

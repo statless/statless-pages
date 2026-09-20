@@ -599,8 +599,6 @@ async def test_opt_out_page_and_toggle(client: AsyncClient) -> None:
 async def test_opt_out_cookie_https_cross_site(
     client: AsyncClient, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    import sys
-
     from collector.config import get_settings
 
     settings = get_settings()
@@ -615,8 +613,7 @@ async def test_opt_out_cookie_https_cross_site(
     assert "statless_opt_out=1" in cookie_header
     assert "SameSite=none" in cookie_header
     assert "Secure" in cookie_header
-    if sys.version_info >= (3, 14):
-        assert "Partitioned" in cookie_header
+    assert "Partitioned" in cookie_header
 
     post_in = await client.post(
         "/opt-out",

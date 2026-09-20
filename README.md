@@ -15,7 +15,7 @@
 
 <p>
   <a href="pyproject.toml">
-    <img src="https://img.shields.io/badge/Python-3.13%2B-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.13 or newer" />
+    <img src="https://img.shields.io/badge/Python-3.14%2B-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.14 or newer" />
   </a>
   <a href="https://fastapi.tiangolo.com">
     <img src="https://img.shields.io/badge/FastAPI-async-009688?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="Built with async FastAPI" />
@@ -42,7 +42,7 @@ Statless Pages is a self-hosted, **cookie-free analytics** collector. It records
 
 > Dwell buckets measure elapsed time after an embed loads, **not scroll depth or proof of reading**. Image proxies, caching, blocked images, and prefetching affect accuracy. See [platform compatibility](#platform-compatibility).
 
-**Stack:** AGPLv3 · Python 3.13+ · FastAPI · SQLite (default) / PostgreSQL · GeoIP2 · Jinja2
+**Stack:** AGPLv3 · Python 3.14+ · FastAPI · SQLite (default) / PostgreSQL · GeoIP2 · Jinja2
 
 ---
 
@@ -99,7 +99,7 @@ Statless is deliberately small. It counts page views and embed dwell on surfaces
 
 - **Docker Engine or Docker Desktop**, with Docker Compose v2, for the container setup.
 - **Git** to clone the repository.
-- **Python 3.13+ and uv** only if you prefer [local development](#local-development) without Docker.
+- **Python 3.14+ and uv** only if you prefer [local development](#local-development) without Docker.
 - **A public HTTPS host** when embedding on Notion, GitHub, or another hosted platform. Localhost is for testing on your own machine.
 
 **1 · Clone the repository**

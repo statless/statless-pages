@@ -21,7 +21,6 @@ import hmac
 import json
 import logging
 import re
-import sys
 import time
 from collections.abc import AsyncIterator, Iterable, MutableMapping
 from contextlib import asynccontextmanager, suppress
@@ -411,7 +410,7 @@ async def opt_out_post(request: Request) -> Response:
             samesite="none" if is_https else "lax",
             secure=is_https,
         )
-        if is_https and sys.version_info >= (3, 14):
+        if is_https:
             resp.set_cookie(
                 "statless_opt_out",
                 "",
@@ -430,7 +429,7 @@ async def opt_out_post(request: Request) -> Response:
             "secure": is_https,
             "httponly": True,
         }
-        if is_https and sys.version_info >= (3, 14):
+        if is_https:
             cookie_kwargs["partitioned"] = True
         resp.set_cookie("statless_opt_out", "1", **cookie_kwargs)
     return _no_store(resp)

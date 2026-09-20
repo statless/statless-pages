@@ -27,6 +27,7 @@ Closes #
 
 ## Checklist
 
+- [ ] All commits signed off with `git commit -s` (Developer Certificate of Origin) — see [CONTRIBUTING.md](CONTRIBUTING.md)
 - [ ] Tests added or updated for behavior changes
 - [ ] No secrets, tokens, or raw IPs added
 - [ ] No cookies, client-side storage, fingerprinting, or third-party scripts introduced
